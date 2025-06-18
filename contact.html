@@ -8,12 +8,33 @@
     /* reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* clean white background */
+    /* full-screen dark gradient (match index.html) */
     body {
       background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
       min-height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       position: relative;
+    }
+
+    /* navigation at top-center */
+    .nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 0 0 4px #fff;
+      transition: color 0.2s ease;
+    }
+    .nav a:hover {
+      color: #ddd;
     }
 
     /* logo top-left */
@@ -49,12 +70,16 @@
   </style>
 </head>
 <body>
+  <!-- navigation menu -->
+  <nav class="nav">
+    <a href="index.html">Main</a>
+  </nav>
+
   <!-- top-left logo -->
   <img src="assets/NexusPads.png" alt="Nexus Pads Logo" class="logo">
 
   <!-- center for your contact info -->
   <div class="contact-info">
-    <!-- Add your contact info below -->
     <p>nexuspadsbusiness@gmail.com</p>
   </div>
 
