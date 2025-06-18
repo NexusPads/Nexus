@@ -5,82 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexus Pads — Coming Soon</title>
   <style>
-    /* Base reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Full-screen dark gradient background */
+    /* full-screen dark gradient */
     body {
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #00e6e6;
       overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Center container for N and text */
+    /* center container */
     .center {
       text-align: center;
-      animation: pulse 2s infinite alternate;
     }
 
-    /* Neon “N” */
-    .center .logo-letter {
-      font-size: 15rem;
-      font-weight: bold;
-      color: transparent;
-      -webkit-text-stroke: 2px #00e6e6;
-      text-shadow:
-        0 0 8px #00e6e6,
-        0 0 16px #00e6e6,
-        0 0 32px #009999;
-      margin-bottom: 1rem;
+    /* your white “N” logo */
+    .center .logo-img {
+      width: 40vmin;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+    .center .logo-img:hover {
+      transform: scale(1.1);
     }
 
-    /* “Coming Soon..” text with subtle glow */
+    /* “Coming Soon..” */
     .center .coming-soon {
+      margin-top: 1rem;
       font-size: 2rem;
-      text-shadow: 0 0 8px #00e6e6;
-      animation: blink 1.5s step-end infinite;
+      color: #fff;
+      text-shadow: 0 0 8px #fff;
     }
 
-    /* Bottom-right Nexus Pads text */
+    /* bottom-right logo */
     .bottom-logo {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #00e6e6;
-      text-shadow: 0 0 4px #00e6e6;
+      width: 8vmin;
+      height: auto;
       cursor: default;
-    }
-
-    /* Pulse animation for center block */
-    @keyframes pulse {
-      from { transform: scale(0.95); }
-      to   { transform: scale(1.05); }
-    }
-
-    /* Blinking effect for “Coming Soon..” */
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50.1%, 100% { opacity: 0.2; }
     }
   </style>
 </head>
 <body>
   <div class="center">
-    <div class="logo-letter">N</div>
+    <!-- central “N” -->
+    <img src="assets/NexusPads.png" alt="Nexus Pads Logo" class="logo-img">
+
+    <!-- coming-soon text -->
     <div class="coming-soon">Coming Soon..</div>
   </div>
 
-  <div class="bottom-logo">Nexus Pads</div>
+  <!-- bottom-right logo -->
+  <img src="assets/NexusPads.png" alt="Nexus Pads Logo" class="bottom-logo">
 </body>
 </html>
