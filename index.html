@@ -24,34 +24,36 @@
       text-align: center;
     }
 
-    /* your white “N” logo */
-    .center .logo-img {
+    /* central “N” logo */
+    .logo-img {
       width: 40vmin;
       height: auto;
       display: block;
       margin: 0 auto;
       transition: transform 0.3s ease;
     }
-    .center .logo-img:hover {
+    .logo-img:hover {
       transform: scale(1.1);
     }
 
-    /* “Coming Soon..” */
-    .center .coming-soon {
+    /* “Coming Soon..” under the N */
+    .coming-soon {
       margin-top: 1rem;
       font-size: 2rem;
       color: #fff;
       text-shadow: 0 0 8px #fff;
     }
 
-    /* bottom-right logo */
-    .bottom-logo {
+    /* bottom-right text */
+    .bottom-text {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 8vmin;
-      height: auto;
-      cursor: default;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 4px #fff;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -64,7 +66,7 @@
     <div class="coming-soon">Coming Soon..</div>
   </div>
 
-  <!-- bottom-right logo -->
-  <img src="assets/NexusPads.png" alt="Nexus Pads Logo" class="bottom-logo">
+  <!-- bottom-right text -->
+  <div class="bottom-text">Nexus Pads</div>
 </body>
 </html>
