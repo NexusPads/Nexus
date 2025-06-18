@@ -19,6 +19,27 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    /* navigation at top-center */
+    .nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 0 0 4px #fff;
+      transition: color 0.2s ease;
+    }
+    .nav a:hover {
+      color: #ddd;
+    }
+
     /* center container */
     .center {
       text-align: center;
@@ -58,6 +79,12 @@
   </style>
 </head>
 <body>
+  <!-- navigation menu -->
+  <nav class="nav">
+    <a href="#" class="nav-link">Main</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
   <div class="center">
     <!-- central “N” -->
     <img src="assets/NexusPads.png" alt="Nexus Pads Logo" class="logo-img">
